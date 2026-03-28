@@ -8,7 +8,7 @@ I am focused on blue team operations including Security Monitoring, Log / Packet
 ## Skills
 
 - SIEM: Splunk
-- Log analysis: Windows Event Logs, Linux logs
+- Log Analysis: Windows Event Logs, Linux logs
 - Network Analysis: Wireshark (Packet inspection and Traffic Analysis)
 - Threat Detection & Incident Response
 - Foundational Threat Hunting
@@ -36,7 +36,7 @@ Hands-on investigations simulating real SOC scenarios. This includes Log analysi
 Technical walkthroughs and notes from cybersecurity labs, focusing on key concepts and practical skills.
 
 ### CTF Writeups
-Challenge-based problem solving and exploitation writeups, primaryily from PicoCTF.
+Challenge-based problem solving and exploitation writeups, primarily from PicoCTF.
 
 ## Current Goals
 
