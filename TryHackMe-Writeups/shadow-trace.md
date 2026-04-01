@@ -19,7 +19,8 @@ I tried commands I would normally use in file analysis, however most commands I 
 
 This gave me some file information, including the header - MachineType which contained the answer I needed.
 
-![alt text](shadow-trace-1.png)
+![alt text](images/shadow-trace-1.png)
+
 Answer: 64-bit
 
 ### What is the hash (sha-256) of the file windows-update.exe?
@@ -28,7 +29,8 @@ Additional research indentified the windows equivalent to the linux command that
 
 I decided to go with the powershell command get-filehash, along with the required headers and fields, which resulted in the sha256 hash.
 
-![alt text](shadow-trace-2.png)
+![alt text](images/shadow-trace-2.png)
+
 Answer: B2A88DE3E3BCFAE4A4B38FA36E884C586B5CB2C2C283E71FBA59EFDB9EA64BFC
 
 ### Identify the URL within the file to use it as an IOC
@@ -43,7 +45,8 @@ Answer: http://tryhatme[.]com/update/security-update.exe
 
 I knew from the previous question that the "tryhatme" domain was what i needed to search for, So I used strings along with findstr in powershell to find all mentions of tryhatme. This led me to the domain I needed.
 
-![alt text](shadow-trace-3.png)
+![alt text](images/shadow-trace-3.png)
+
 Answer: responses.tryhatme.com
 
 ### Input the decoded flag from the suspicious domain
@@ -70,7 +73,8 @@ Answer: https://tryhatme.com/dev/main.exe
 
 The second SOC alert featured another encoding. There is a sequence of numbers in an array, which gets converted to a corresponding character in numeric code. Again i used CyberChef to decipher this, using the From Decimal recipe (with comma delimiter).
 
-![alt text](shadow-trace-4.png)
+![alt text](images/shadow-trace-4.png)
+
 Answer: https://reallysecureupdate.tryhatme.com/update.exe
 
 ### What's the name of the file saved in the alert triggered by chrome.exe?
@@ -120,7 +124,7 @@ This room reinforced key SOC analyst skills, particularly in malware analysis an
 - Improved ability to extract and interpret Indicators of Compromise, including hashes, domains and URLs.
 - Strengthened familiarity with threat intelligence platforms such as VirusTotal to validate suspicious files.
 - Practiced decoding obfuscated data (Base64, decimal encoding), which is commonly used to mask malicious activity.
-- Strengthened understanding of how malware may leverage system libraries for network communication (ws2_32.dll.)
+- Strengthened understanding of how malware may leverage system libraries for network communication (ws2_32.dll).
 - Applied basic investigation techniques to correlate alerts in a SIEM-like environment.
 
 This lab simulated real-world SOC triage, including identifying malicious activity, extracting IOCs and analysing alerts.
