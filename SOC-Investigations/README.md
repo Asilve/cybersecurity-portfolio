@@ -1,13 +1,32 @@
 # SOC Investigations
 
-This section contains hands-on security investigations simulating real SOC scenarios.
+This repository contains practical security investigations and homelab exercises designed to simulate the work of a Security Operations Centre (SOC) analyst.
 
-Each report includes:
-- Overview
-- Log analysis / network analysis
-- Investigation steps
-- MITRE ATT&CK / Cyber Kill Chain mapping
-- Remediation actions
-- Takeaways
+The investigations are performed within a personal Windows and Splunk homelab and focus on understanding telemetry, analysing events, developing investigative workflows and documenting findings.
 
-These projects demonstrate practical SOC skills, including: SIEM usage, Network Analysis and threat detection.
+Each investigation may include:
+
+- Objective
+- Lab environment
+- Action performed
+- Evidence collected
+- SPL queries
+- Key observations
+- Analyst assessment
+- Potential security implications
+- MITRE ATT&CK mapping (where appropriate)
+- Possible mitigations
+- Lessons learned
+
+Topics covered include:
+
+- Windows Event Logs
+- Sysmon
+- Splunk
+- Authentication events
+- Account management
+- Process creation
+- Network activity
+- Threat hunting
+- Detection engineering
+- Incident response concepts

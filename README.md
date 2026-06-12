@@ -1,57 +1,75 @@
 # Cybersecurity Portfolio
 
 ## About Me
-I am Anthony Silvester, an aspiring SOC Analyst with a strong foundation in Cybersecurity, currently studying Computer Science at the University of Liverpool.
+Hi, I'm Anthony Silvester, a Computer Science student at the University of Liverpool with a particular interest in Security Operations Centre (SOC) roles and blue team security.
 
-I am focused on blue team operations including Security Monitoring, Log / Packet Analysis and SIEM tools.
+This repository documents my practical cybersecurity learning through home lab investigations, SIEM analysis, TryHackMe exercises and technical write-ups. My focus is on developing practical investigation skills rather than simply completing courses or labs.
+
+#### Current areas of interest include:
+- Security Monitoring
+- SIEM (Splunk)
+- Windows Event Logs
+- Sysmon
+- Log Analysis
+- Detection Engineering
+- Threat Hunting
+- Incident Response
 
 ## Skills
 
 - SIEM: Splunk
 - Log Analysis: Windows Event Logs, Linux logs
 - Network Analysis: Wireshark (Packet inspection and Traffic Analysis)
-- Threat Detection & Incident Response
+- Basic Threat Detection & Incident Investigation
 - Foundational Threat Hunting
+- MITRE ATT&CK Mapping
+- Security Monitoring
 
 ## Certifications and Education
 
-- Cisco Introduction to Cybersecurity
-- TryHackMe Paths: Pre Security, Cyber Security 101, SOC Level 1 (In progress), SOC Level 2 (planned)
+#### Education
 - BSc Computer Science - University of Liverpool (In progress)
-- CompTIA Security+ (Planned)
 
-## Current and Future Training Platforms
+#### Certifications
+- Cisco Introduction to Cybersecurity
+- CompTIA Security+ (In progress)
 
-- TryHackMe
-- PicoCTF
-- OverTheWire
-- Hack The Box (Planned)
+#### Learning Platforms
+- TryHackMe Paths
+    - Pre Security 
+    - Cyber Security 101
+    - SOC Level 1
+    - SOC Level 2 (In progress)
 
 ## Portfolio Sections
 
 ### SOC Investigations
-Hands-on investigations simulating real SOC scenarios. This includes Log analysis, alert triage and incident response using TryHackMe SOC Simulations and future home lab environments
+Hands-on investigations performed within a personal Splunk-based home lab.
+
+Investigations focus on understanding telemetry, analysing logs, developing investigative workflows and documenting findings with supporting evidence and analyst assessments.
 
 ### TryHackMe Writeups
-Technical walkthroughs and notes from cybersecurity labs, focusing on key concepts and practical skills.
+Technical notes and selected write-ups from practical labs, focusing on security concepts, tooling and investigation techniques.
 
 ### CTF Writeups
-Challenge-based problem solving and exploitation writeups, primarily from PicoCTF.
+Challenge write-ups documenting problem-solving approaches and technical solutions, primarily from PicoCTF.
 
 ## Current Goals
 
 ### Short Term (Next 6 Months)
 
 - Achieve CompTIA Security+ Certificate
-- Complete TryHackMe SOC Level 1 and level 2 Pathways
-- Build and document a SOC home lab environment (Splunk + log sources)
-- Continue developing GitHub Portfolio with SOC investigations
+- Complete TryHackMe SOC level 2 Pathway
+- Continue developing and documenting Splunk-based home lab
+- Expand this portfolio with practical SOC investigations
+- Strengthen detection engineering and log analysis skills
 
 ### Long Term 
 
 - Graduate with a First Class BSc in Computer Science
-- Strengthen SIEM, detection and incident response capabilities
-- Secure a role as a SOC Analyst
+- Continue developing practical blue team skills
+- Build strong SIEM, detection and incident response capability
+- Begin a career as a Security Operations Centre (SOC) Analyst
 
 ## Contact
 
