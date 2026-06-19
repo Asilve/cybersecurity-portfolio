@@ -1,8 +1,8 @@
 # SOC Investigations
 
-This repository contains practical security investigations and homelab exercises designed to simulate the work of a Security Operations Centre (SOC) analyst.
+This directory contains practical security investigations and homelab exercises designed to simulate the work of a Security Operations Centre (SOC) analyst.
 
-The investigations are performed within a personal Windows and Splunk homelab and focus on understanding telemetry, analysing events, developing investigative workflows and documenting findings.
+The investigations are performed within a personal Windows and Splunk homelab and focus on understanding security telemetry, analysing events, developing investigative workflows, validating findings and documenting conclusions.
 
 Each investigation may include:
 
@@ -18,15 +18,25 @@ Each investigation may include:
 - Possible mitigations
 - Lessons learned
 
-Topics covered include:
+## Topics covered include:
+
+### Technologies
 
 - Windows Event Logs
 - Sysmon
 - Splunk
-- Authentication events
-- Account management
-- Process creation
-- Network activity
-- Threat hunting
-- Detection engineering
-- Incident response concepts
+
+### Investigation Areas
+
+- Authentication Events
+- Account Management
+- Process Creation
+- Network Activity
+
+### SOC Skills
+
+- Threat Hunting
+- Detection Engineering
+- Incident Response Concepts
+
+#### _Architecture documentation can be found in the Architecture directory._

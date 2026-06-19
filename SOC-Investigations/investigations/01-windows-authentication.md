@@ -1,7 +1,7 @@
 # Authentication Investigation 01 - Successful and Failed Logins
 
 ## Objective
-The objective of this lab was to understand how common Windows authentication and account management events appear within Splunk, identify the information available to an analyst, and consider how these events could be interpreted during a security investigation.
+The objective of this lab was to understand how common Windows authentication events appear within Splunk, identify the information available to an analyst, and consider how these events could be interpreted during a security investigation.
 
 The exercise also explores potential indicators of compromise, benign explanations, and possible MITRE ATT&CK mappings where appropriate.
 
@@ -43,7 +43,7 @@ index=main EventCode=4624 Account_Name=Alice
 - Logon ID can be used to distinguish separate authentication sessions.
 
 ### Analyst Assessment
-Logon Type 2 represents an interactive local logon, typically indicating a user loggin in directly at the machine.
+Logon Type 2 represents an interactive local logon, typically indicating a user logging in directly at the machine.
 
 A single user action may generate multiple Windows events, therefore analysts should avoid assuming that every 4624 event represents a separate user login.
 
@@ -149,6 +149,7 @@ Potential (context dependent):
 
 - T1110 - Brute Force
 - T1110.001 - Password Guessing
+- T1110.003 - Password Spraying
 
 ### Potential Mitigations
 - Multi-Factor Authentication
