@@ -206,11 +206,11 @@ To start my investigation, I searched "index=main Account_Name = Bob". This resu
 
 Interestingly, the 4798 events were before the two add and remove from local group events. I decided to turn my investigation to these two events, and to analyse the content within them.
 
-![alt text](../screenshots/02_AccountLocalEvent.jpg)
+![alt text](../screenshots/02_AccountLocalGroupEvent.jpg)
 
 What i discovered was that there was no field containing Bob as the user that was altered. This would explain why my first investigative search did not result in these logs appearing. To further analyse what im seeing, I formatted the results into a table.
 
-![alt text](../screenshots/02_AccountLocalTable.jpg)
+![alt text](../screenshots/02_AccountLocalGroupTable.jpg)
 
 From this table, we can deduce the following information. Firstly, event 4732 occured apporximately 40 seconds before 4733, signifying the account(s) were added to a local user group, and shortly after were removed from a local user group. Looking towards Group_Name we can see the local user group that the user(s) were added to and removed from was *Administrators*. Furthermore Account_Name shows us Admin was involved in this process, and looking at the individual logs, we see they were the initiator of the change in local user groups. However, its crutial to note the affected Account_Name is blank, meaning we have no evidence from this alone if the change really was Bob. Our final piece of information is the Security_ID field which shows 3 separate IDs. These IDs are linked to the users and the Administrator user group. We can deduce from the event logs that the middle Security ID, more specifically, the one ending with 1003, is linked to our affected user. Therefore, I needed a search that pinpoints our Security ID to a user.
 

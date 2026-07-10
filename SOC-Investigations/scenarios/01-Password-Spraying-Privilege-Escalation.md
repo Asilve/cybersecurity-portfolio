@@ -45,7 +45,7 @@ We can confirm so far, that Carol's user account had their Local user account se
 
 Upon searching for Carol while excluding event code "4798", we have 173 events, far too many to analyse. Therefore, I narrowed my search to only Account management events, and formatted it into a Table. I achieved this by searching for only event codes with the range of 4720 and 4740 inclusive.
 
-![alt text](../screenshots/03_Account_Management_Table.jpg)
+![alt text](../screenshots/03_Account_Management_table.jpg)
 
 Now we have narrowed our search to 9 account management events. Out of these, we can see 7 events that we have seen before as they are related to "backup_admin". The other 2 events are therefore more interesting, which have event codes 4723 followed by 4738. This is an important piece of information as it indicates that a password change attempt was made for Carol's account, followed by the account being modified. In this context, this may indicate Carol's password was changed after privilege escalation. This raises our suspicion of the Carol user accounts activity as possible Persistence and Defense Impairment could be attempted. However, the other important piece of information is that no other accounts were modified, created or deleted by Carol at this time.
 
