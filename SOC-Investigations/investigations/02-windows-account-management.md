@@ -17,7 +17,7 @@ The exercise also explores potential indicators of compromise, benign explanatio
 
 ## Investigation 1: User account Creation
 ### Actions Performed
-Successfully create 2 local user accounts, *Bob*, and *Carol*. Bob is an *Enabled* User account, Carol is a *Disabled* User account. To make analysis easier, i formatted it into a table showing Time, EventCode and AccountName.
+Successfully create 2 local user accounts, *Bob*, and *Carol*. Bob is an *Enabled* User account, Carol is a *Disabled* User account.
 
 ### Evidence Collection
 An initial search using "index=main Account_Name = Bob OR Account_Name = Carol" resulted in 28 events. These include EventIDs: 
@@ -69,6 +69,7 @@ index=main EventCode=4720
 - One 4720 event created per account creation.
 - Enabling and Disabling account states can be determined correlating account creation events (4720) with subsequent enable (4722) and disable (4725) events.
 - Analysts can observe who created the Account via the 4720 event.
+- Password related logs may be generated through other events - such as Account creation events.
 
 ### Analyst Assessment
 No indicators of compromise were identified. The observed activity was consistent with legitimate administrative account provisioning.
@@ -88,7 +89,9 @@ Local Group modification could signify privilege escalation, and any login attem
 
 ### MITRE ATT&CK
 Tactic: TA003 - Persistence
+
 Technique: T1136 - Create Account
+
 Sub-Technique: T1136.001 - Local Account
 
 
@@ -104,6 +107,7 @@ Initially, I started my investigation by searching "index=main Account_Name = Bo
 I proceeded to search "index=main Account_Name = Bob AND (EventCode=4722 OR EventCode=4725 OR EventCode=4738)" to tighten my search and establish a more definitive timeline. I discovered 9 total logs, 5 being relevant to this investigation. Account Disabling has event 4725 followed by two 4738 events. Account enabling has event 4722 followed by a single 4738 event. Within the 4738 events Immediately following the Account enable and disabling, we can observe this change under the User Account Control field within Changed Attributes.
 
 ![alt text](../screenshots/02_AccountEDTimeline2.jpg)
+
 ![alt text](../screenshots/02_AccountDisabledField.jpg)
 
 ### Event IDs
@@ -136,7 +140,9 @@ Activity on the Enabled account should be closely monitored to determine any mal
 
 ### MITRE ATT&CK
 Tactics: TA0003 - Persistence, TA0004 - Privilege Escalation
+
 Techniques: T1078 - Valid Accounts
+
 Sub-Techniques: T1078.003 - Local Accounts
 
 ## Investigation 3: Account Deletion
@@ -185,6 +191,7 @@ The account itself should be considered, in case it contains important informati
 
 ### MITRE ATT&CK
 Tactics: TA0112 - Defense Impairment, TA0040 - Impact.
+
 Techniques: T1531 - Account Access Removal.
 
 
@@ -247,6 +254,7 @@ Unexpected addition of accounts to the Administrators local group may indicate p
 
 ### MITRE ATT&CK
 Tactics: TA0004 - Privilege Escalation, TA0003 - Persistence
+
 Techniques: T1098 Account Manipulation
 
 ## Lessons Learned

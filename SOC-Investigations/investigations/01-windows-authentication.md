@@ -76,7 +76,7 @@ WinEventLog - 4625 (Failed Login)
 
 ### SPL Query:
 index=main EventCode=4625 Account_Name=Alice
-| table _time Account_Name Logon_Type Failure_Reason Workstation_Name Source_Network_Address
+| table _time Account_Name Logon_Type Workstation_Name Source_Network_Address
 
 ### Key Observations
 - Logon Type = 2

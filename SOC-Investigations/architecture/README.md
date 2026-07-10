@@ -33,6 +33,12 @@ Future additions may include:
 - Internal networking
 - Additional Windows endpoints
 
+## Sysmon Parsing Fix
+
+Sysmon logs were initially ingested into Splunk as raw XML, which made investigation difficult. The Splunk Add-on for Sysmon was installed and the Sysmon input was updated to use the correct XML Windows Event Log sourcetype. This enabled useful field extraction for Sysmon events, including CommandLine, Image, ParentImage and User.
+
+This improvement makes future process creation investigations much easier, especially for PowerShell, scheduled task activity, command-line execution and parent-child process analysis.
+
 ### Versions
 - Version 1.0 (June 2026)
   - Windows 10 endpoint
